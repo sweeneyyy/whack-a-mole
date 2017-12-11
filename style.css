@@ -1,0 +1,57 @@
+body{
+	text-align: center;
+	display: inline-block;
+	font-family: sans-serif;
+
+
+}
+#game {
+	position: relative;
+
+
+}
+
+#gameGrid {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: 1px solid black;
+	width: 500px;
+	height: 500px;
+	margin: 10px 20px;
+	/*margin-bottom: 200px;*/
+}
+
+.gridBox {
+	width: 100px;
+	height: 100px;
+	top: 20px;
+	left: 0px;
+	border: 1px solid black;
+	display: inline-block;
+	margin: 6px 0;
+	padding: 20px;
+	vertical-align: center;
+
+}
+
+#scoreBox {
+	position: absolute;
+	width: 300px;
+	height: 200px;
+	top: 20%;
+	margin-left: 20px;
+	border: 1px solid black;
+	display: inline-block;
+
+}
+
+#reset {
+	position: absolute;
+	display: inline-block;
+	width: 150px;
+	padding: 5px;
+	margin: 10px 0;
+	border: 1px solid black;
+	font-size: 18px;
+}
