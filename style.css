@@ -8,6 +8,7 @@ body{
 
 h1 {
 	margin: 20px 10px;
+	
 
 }
 h5 {
@@ -21,12 +22,20 @@ button {
 	position: absolute;
 	display: inline-block;
 	width: 200px;
-	top: 550px;
-	left: 500px;
 	padding: 5px;
 	margin: 10px 20px;
 	border: 1px solid black;
 	font-size: 18px;
+}
+
+#start{
+	top: 530px;
+	left: 500px;
+}
+
+#reset {
+	top: 575px;
+	left: 500px;
 }
 
 /*#game {
@@ -64,7 +73,7 @@ button {
 	position: absolute;
 	display: inline-block;
 	width: 200px;
-	height: 450px;
+	height: 430px;
 	top: 20;
 	left: 500px;
 	margin: 10px 20px;
@@ -86,11 +95,15 @@ button {
 
 }
 
+#timer {
+	color: blue;
+}
+
 #highScore {
 
 }
 
-#middle-c {
+/*#middle-c {
 	background-image: url('assets/images/shark.png');
 	background-size: cover;
-}
+}*/
