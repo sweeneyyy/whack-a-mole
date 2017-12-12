@@ -1,33 +1,48 @@
 body{
 	text-align: center;
 	display: inline-block;
-	font-family: sans-serif;
-
+	font-family: 'Barlow Semi Condensed', sans-serif;
+	background: #e3f2f4;
 
 }
 
+h1 {
+	margin: 20px 10px;
+
+}
 h5 {
 	position: relative;
 	margin: 5px 2px;
 	padding: 10px 0 0 0;
+	font-size: 16px;
 }
 
-#game {
+button {
+	position: absolute;
+	display: inline-block;
+	width: 200px;
+	top: 550px;
+	left: 500px;
+	padding: 5px;
+	margin: 10px 20px;
+	border: 1px solid black;
+	font-size: 18px;
+}
+
+/*#game {
 	position: relative;
 
-
-}
+}*/
 
 #gameGrid {
 	position: absolute;
-	top: 0;
+	top: 20;
 	left: 0;
 	border: 1px solid black;
 	padding-top: 20px;
 	width: 500px;
 	height: 500px;
 	margin: 10px 2px;
-	/*margin-bottom: 200px;*/
 }
 
 .gridBox {
@@ -40,6 +55,8 @@ h5 {
 	margin: 6px 0;
 	padding: 20px;
 	vertical-align: center;
+	background-image: url('assets/images/waves.png');
+	background-size: cover;
 
 }
 
@@ -48,7 +65,7 @@ h5 {
 	display: inline-block;
 	width: 200px;
 	height: 450px;
-	top: 0;
+	top: 20;
 	left: 500px;
 	margin: 10px 20px;
 	border: 1px solid black;
@@ -58,9 +75,10 @@ h5 {
 .displayStats {
 	display: inline-block;
 	width: 130px;
-	height: 60px;
+	height: 50px;
 	border: 1px solid black;
-	margin: 20px 5px;
+	margin: 10px 5px 0 5px;
+	background-color: #fff;
 
 }
 
@@ -72,14 +90,7 @@ h5 {
 
 }
 
-#reset {
-	position: absolute;
-	display: inline-block;
-	width: 200px;
-	top: 475px;
-	left: 500px;
-	padding: 5px;
-	margin: 10px 20px;
-	border: 1px solid black;
-	font-size: 18px;
+#middle-c {
+	background-image: url('assets/images/shark.png');
+	background-size: cover;
 }
