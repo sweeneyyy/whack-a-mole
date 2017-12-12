@@ -8,9 +8,19 @@ body{
 
 h1 {
 	margin: 20px 10px;
-	
+	text-align: left;
+}
+
+h3 {
+	display: inline;
+}
+
+.playerUp {
+	font-size: 30px;
+	color: red;
 
 }
+
 h5 {
 	position: relative;
 	margin: 5px 2px;
@@ -52,6 +62,8 @@ button {
 	width: 500px;
 	height: 500px;
 	margin: 10px 2px;
+	cursor: url('assets/images/oar.png');
+
 }
 
 .gridBox {
@@ -91,19 +103,29 @@ button {
 
 }
 
+.shark {
+	background-image: url('assets/images/shark.png');
+	background-size: cover;
+}
+
+.noShark {
+	background-image: url('assets/images/waves.png');
+	background-size: cover;
+}
+
+
 #score {
 
 }
 
 #timer {
 	color: blue;
+	font-size: 26px;
+
 }
 
 #highScore {
 
 }
 
-/*#middle-c {
-	background-image: url('assets/images/shark.png');
-	background-size: cover;
-}*/
+
