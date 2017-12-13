@@ -1,31 +1,46 @@
 var sharkSpaces = document.querySelectorAll("#gameGrid div");
+var highScore = document.getElementById("highScore");
 var timer = document.getElementById("timer");
 var interval;
 var totalSeconds = 10;
-var player1Score = 0;
-var player2Score = 0;
-var missed = 0;
-var currentScore = 0;
-var highScore;
-	
+var numberOfPlayers = 2;
+var currentPlayer = 2;
+var currentScore = 0;	
 
-// On click of Start Game - Change grid boxes background image randomly from ocean to shark
+// if(localStorage.highScore == undefined){
+//    localStorage.highScore = 0;
+
+
+var playerTurn = function(){
+	if(currentPlayer === 1){
+		 currentPlayer = currentPlayer + 1;
+		 document.getElementById("playerUp").textContent = "Player 2";
+		}else {
+			currentPlayer = currentPlayer - 1;
+			document.getElementById("playerUp").textContent = "Player 1";
+		}
+};
+
 var startGame = function(){
+	totalSeconds = 10;
 	console.log("starting new game");
 	countdown();
 
 	clearInterval(interval);
-	interval = setInterval(countdown, 1000);
+	interval = setInterval(countdown, 500);
+
+	playerTurn();
+	console.log(currentPlayer);
 };
 
-
+// Change grid boxes background image randomly from ocean to shark
 var displaySharks = function(spaceToPopulate){
-	//Set everything back to waves
+	// Set everything back to waves
 	for(var i = 0; i < sharkSpaces.length; i++){
 	  sharkSpaces[i].classList.remove("shark");
 	  sharkSpaces[i].classList.add("water");
 	}
-	//Set the selected box to shark
+	// Set the selected box to shark
 	spaceToPopulate.classList.add("shark");
 	spaceToPopulate.classList.remove("water");
 
@@ -35,41 +50,43 @@ var displaySharks = function(spaceToPopulate){
 var countdown = function(){
 	totalSeconds -= 1;
 	document.getElementById("timer").textContent = totalSeconds;
-		console.log("time left", totalSeconds);
 
 	for(var i = 0; i < sharkSpaces.length; i++){
 	  sharkSpaces[i].classList.remove("shark");
 	  sharkSpaces[i].classList.add("water");
 	}
-	if(totalSeconds <= 0){
-	  clearInterval(interval);	
-	  sharkSpaces.classList.add("water");
+	for(var i = 0; i < sharkSpaces.length; i++){
+		if(totalSeconds <= 0){
+		  clearInterval(interval);
+		  sharkSpaces[i].classList.add("water");
+		}
+		else{
+			var sharkSpaceNumber = Math.floor(Math.random() * 9);
+			displaySharks(document.querySelectorAll(".gridBox")[sharkSpaceNumber]);
+		}
 	}
-	else{
-		var sharkSpaceNumber = Math.floor(Math.random() * 9);
-		displaySharks(document.querySelectorAll(".gridBox")[sharkSpaceNumber]);
-	}
-
 };
 
-// Keep track of points scored and missed
-// If player clicks on shark image before it disappears, add 1 point to score
+// Keep track of points scored for each player
 var gameScore = function(bop){
 	if(!bop.target.classList.contains("shark")) return; {
 		currentScore++;
 			console.log("Got one!");
-			console.log(bop);
-
-		document.getElementById("score").textContent = currentScore;
 	}
+	if(currentPlayer === 1){
+		document.getElementById("score-1").textContent = currentScore;
+	}else{
+		document.getElementById("score-2").textContent = currentScore;
+	}
+	// Save high score in local storage and stay displayed on board
+	// if(currentScore > localStorage.highScore){
+	// 	localStorage.highScore = currentScore;
+	// 	document.getElementById("highScore").textContent = localStorage. highScore;
 
-	// If player does not click on the shark image while displayed, add 1 to missed
-
-	// Display count of missed
+	// }
 
 };
 
-// Save high score in local storage and stay displayed on board
 var addSharkSpacesEventListeners = function(){
 	for(var i = 0; i < sharkSpaces.length; i++){
 		sharkSpaces[i].addEventListener("click", gameScore);
