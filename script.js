@@ -1,10 +1,11 @@
-var interval;
-var timer = document.getElementById("timer");
-var totalSeconds = 10;
 var sharkSpaces = document.querySelectorAll("#gameGrid div");
+var timer = document.getElementById("timer");
+var interval;
+var totalSeconds = 10;
 var player1Score = 0;
 var player2Score = 0;
 var score = 0;
+var missed = 0;
 var highScore;
 	
 
@@ -51,30 +52,29 @@ var countdown = function(){
 
 };
 
-// Keep track of score - use classes (on click if class is x then add point)
-// var gameScore = function(){
-// 	if(sharkSpaces.classList.contains("shark")
+// Keep track of points scored and missed
+// If player clicks on shark image before it disappears, add 1 point to score
+var gameScore = function(){
+	if(!sharkSpaces.classList.contains("sharks").isTrusted) return; {
+		score ++;
+		console.log("Got one!");
+		// Display score
+		document.getElementById("score").textContent = score;
+	}
 
-// 		score += 1;
-// 		console.log("Got one!");
-// 		document.getElementById("score").textContent = score;
-// 	}
-// }
-	
-	// If player clicks on shark image before it disappears, add 1 point to score
 	// If player does not click on the shark image while displayed, add 1 to missed
 
+	// Display missed
 
-	// Display score and missed 
-
+}
 
 // Save high score in local storage and stay displayed on board
-// var addSharkSpacesEventListeners = function(){
-// 	for(var i = 0; i < sharkSpaces.length; i++){
-// 		sharkSpaces[i].addEventListener("click", gameScore);
-//   }
-// }
-// addSharkSpacesEventListeners();
+var addSharkSpacesEventListeners = function(){
+	for(var i = 0; i < sharkSpaces.length; i++){
+		sharkSpaces[i].addEventListener("click", gameScore);
+  }
+}
+addSharkSpacesEventListeners();
 
 
 

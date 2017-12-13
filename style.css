@@ -3,7 +3,6 @@ body{
 	display: inline-block;
 	font-family: 'Barlow Semi Condensed', sans-serif;
 	background: #e3f2f4;
-
 }
 
 h1 {
@@ -15,10 +14,14 @@ h3 {
 	display: inline;
 }
 
-.playerUp {
-	font-size: 30px;
+#playerUp {
+	position: relative;
+	display: block;
+	top: 20px;
+	font-size: 20px;
 	color: red;
-
+	text-transform: uppercase;
+	font-weight: 700;
 }
 
 h5 {
@@ -48,14 +51,9 @@ button {
 	left: 500px;
 }
 
-/*#game {
-	position: relative;
-
-}*/
-
 #gameGrid {
 	position: absolute;
-	top: 20;
+	/*top: 10;*/
 	left: 0;
 	border: 1px solid black;
 	padding-top: 20px;
@@ -63,7 +61,6 @@ button {
 	height: 500px;
 	margin: 10px 2px;
 	cursor: url('assets/images/oar.png');
-
 }
 
 .gridBox {
@@ -73,12 +70,11 @@ button {
 	left: 0px;
 	border: 1px solid black;
 	display: inline-block;
-	margin: 6px 0;
+	margin: 0;
 	padding: 20px;
 	vertical-align: center;
 	background-image: url('assets/images/waves.png');
 	background-size: cover;
-
 }
 
 #scoreBox {
@@ -90,7 +86,6 @@ button {
 	left: 500px;
 	margin: 10px 20px;
 	border: 1px solid black;
-
 }
 
 .displayStats {
@@ -100,7 +95,8 @@ button {
 	border: 1px solid black;
 	margin: 10px 5px 0 5px;
 	background-color: #fff;
-
+	color: blue;
+	font-size: 26px;
 }
 
 .shark {
@@ -111,21 +107,6 @@ button {
 .noShark {
 	background-image: url('assets/images/waves.png');
 	background-size: cover;
-}
-
-
-#score {
-
-}
-
-#timer {
-	color: blue;
-	font-size: 26px;
-
-}
-
-#highScore {
-
 }
 
 
