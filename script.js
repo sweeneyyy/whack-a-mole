@@ -23,14 +23,13 @@ var displaySharks = function(spaceToPopulate){
 	//Set everything back to waves
 	for(var i = 0; i < sharkSpaces.length; i++){
 	  sharkSpaces[i].classList.remove("shark");
-	  sharkSpaces[i].classList.add("noShark");
+	  sharkSpaces[i].classList.add("water");
 	}
 	//Set the selected box to shark
 	spaceToPopulate.classList.add("shark");
-	spaceToPopulate.classList.remove("noShark");
+	spaceToPopulate.classList.remove("water");
 
 };
-
 
 // Set time limit of the game
 var countdown = function(){
@@ -40,11 +39,11 @@ var countdown = function(){
 
 	for(var i = 0; i < sharkSpaces.length; i++){
 	  sharkSpaces[i].classList.remove("shark");
-	  sharkSpaces[i].classList.add("noShark");
+	  sharkSpaces[i].classList.add("water");
 	}
 	if(totalSeconds <= 0){
 	  clearInterval(interval);	
-	  sharkSpaces.classList.add("noShark");
+	  sharkSpaces.classList.add("water");
 	}
 	else{
 		var sharkSpaceNumber = Math.floor(Math.random() * 9);
@@ -55,19 +54,11 @@ var countdown = function(){
 
 // Keep track of points scored and missed
 // If player clicks on shark image before it disappears, add 1 point to score
-// var gameScore = function(){
-// 		if(sharkSpaces.classList.contains("sharks", "clicked")){
-// 		score ++;
-// 			console.log("Got one!");
-// 		// Display score
-// 		document.getElementById("score").textContent = score;
-// 	}
-
-// This one will adding score to box but on click of any box...not just shark
 var gameScore = function(bop){
-	if(!bop.isTrusted) return; {
+	if(!bop.target.classList.contains("shark")) return; {
 		currentScore++;
 			console.log("Got one!");
+			console.log(bop);
 
 		document.getElementById("score").textContent = currentScore;
 	}
