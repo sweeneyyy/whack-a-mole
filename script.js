@@ -4,8 +4,8 @@ var interval;
 var totalSeconds = 10;
 var player1Score = 0;
 var player2Score = 0;
-var score = 0;
 var missed = 0;
+var currentScore = 0;
 var highScore;
 	
 
@@ -16,7 +16,7 @@ var startGame = function(){
 
 	clearInterval(interval);
 	interval = setInterval(countdown, 1000);
-}
+};
 
 
 var displaySharks = function(spaceToPopulate){
@@ -28,6 +28,7 @@ var displaySharks = function(spaceToPopulate){
 	//Set the selected box to shark
 	spaceToPopulate.classList.add("shark");
 	spaceToPopulate.classList.remove("noShark");
+
 };
 
 
@@ -35,7 +36,7 @@ var displaySharks = function(spaceToPopulate){
 var countdown = function(){
 	totalSeconds -= 1;
 	document.getElementById("timer").textContent = totalSeconds;
-	console.log("time left", totalSeconds);
+		console.log("time left", totalSeconds);
 
 	for(var i = 0; i < sharkSpaces.length; i++){
 	  sharkSpaces[i].classList.remove("shark");
@@ -54,19 +55,28 @@ var countdown = function(){
 
 // Keep track of points scored and missed
 // If player clicks on shark image before it disappears, add 1 point to score
-var gameScore = function(){
-	if(!sharkSpaces.classList.contains("sharks").isTrusted) return; {
-		score ++;
-		console.log("Got one!");
-		// Display score
-		document.getElementById("score").textContent = score;
+// var gameScore = function(){
+// 		if(sharkSpaces.classList.contains("sharks", "clicked")){
+// 		score ++;
+// 			console.log("Got one!");
+// 		// Display score
+// 		document.getElementById("score").textContent = score;
+// 	}
+
+// This one will adding score to box but on click of any box...not just shark
+var gameScore = function(bop){
+	if(!bop.isTrusted) return; {
+		currentScore++;
+			console.log("Got one!");
+
+		document.getElementById("score").textContent = currentScore;
 	}
 
 	// If player does not click on the shark image while displayed, add 1 to missed
 
-	// Display missed
+	// Display count of missed
 
-}
+};
 
 // Save high score in local storage and stay displayed on board
 var addSharkSpacesEventListeners = function(){
@@ -74,6 +84,7 @@ var addSharkSpacesEventListeners = function(){
 		sharkSpaces[i].addEventListener("click", gameScore);
   }
 }
+
 addSharkSpacesEventListeners();
 
 
@@ -84,14 +95,11 @@ document.addEventListener("DOMContentLoaded", function() {
 	document.getElementById("start").addEventListener("click", startGame);
 	// call function that is sharkBoxes event listeners
 
-	// Start the timer
-
 
 	// Start jaws theme song?
 	
 
 	// Set up the sharkBoxes
-
 	
 });
 
