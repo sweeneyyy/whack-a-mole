@@ -60,7 +60,8 @@ button {
 	width: 500px;
 	height: 500px;
 	margin: 10px 2px;
-	cursor: url('assets/images/oar.png');
+	cursor: url('https://i.imgur.com/iVmCd7k.png'), pointer;
+
 }
 
 .gridBox {
