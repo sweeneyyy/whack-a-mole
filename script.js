@@ -20,10 +20,15 @@ var newGame = function() {
 	player2Score = 0;
 	addSharkSpacesEventListeners();
 
+	document.getElementById("gamePage").style.display = "block";
+	document.getElementById("firstPage").style.display = "none";
+
 	document.getElementById("score-1").textContent = player1Score;
 	document.getElementById("score-2").textContent = player2Score;
+
 	document.getElementById("start").style.display = "block";
 	document.getElementById("start").textContent = "Player 1";
+	document.getElementById("playerUp").textContent = "...Grab Your Paddle";
 	document.getElementById("reset").style.display = "none";
 }
 // Start new game
@@ -140,12 +145,25 @@ var addSharkSpacesEventListeners = function(){
 
 addSharkSpacesEventListeners();
 
+var howTo = function(){
+	swal({
+		title:"How To Play",
+		text: "Use the paddle to whack the sharks!",
+		button: "Got it",
+	});
+}
 
 document.addEventListener("DOMContentLoaded", function() {
+	document.getElementById("gamePage").style.display = "none";
+	document.getElementById("firstPage").style.display = "block";
+
 // Add Event Listeners
 if(localStorage.getItem("highScore")){
 	document.getElementById("highScore").textContent = localStorage.getItem("highScore");
 	}
+
+	document.getElementById("howTo").addEventListener("click", howTo);
+	document.getElementById("letsPlay").addEventListener("click", newGame);
 	document.getElementById("reset").addEventListener("click", newGame);
 	document.getElementById("reset").style.display = "none";
 	document.getElementById("start").addEventListener("click", startGame);
