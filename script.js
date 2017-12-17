@@ -9,11 +9,7 @@ var currentScore = 0;
 var player1Score = 0;
 var player2Score = 0;
 
-// var removeSharkSpacesEventListeners = function(){
-// 	for(var i = 0; i < sharkSpaces.length; i++){
-// 		sharkSpaces[i].removeEventListener("click", gameScore);
-//   }
-// };
+
 var newGame = function() {
 	totalSeconds = 10;
 	player1Score = 0;
@@ -22,12 +18,10 @@ var newGame = function() {
 
 	document.getElementById("gamePage").style.display = "block";
 	document.getElementById("firstPage").style.display = "none";
-
 	document.getElementById("score-1").textContent = player1Score;
-	document.getElementById("score-2").textContent = player2Score;
-
+	document.getElementById("score-2").textContent = player2Score;1
 	document.getElementById("start").style.display = "block";
-	document.getElementById("start").textContent = "Player 1";
+	document.getElementById("start").textContent = "Start";
 	document.getElementById("playerUp").textContent = "...Grab Your Paddle";
 	document.getElementById("reset").style.display = "none";
 }
@@ -78,6 +72,10 @@ var countdown = function(){
 	  sharkSpaces[i].classList.remove("shark");
 	  sharkSpaces[i].classList.add("water");
 	}
+	if(totalSeconds <= 3){
+		document.getElementById("timer").style.color = "red";
+	}
+	
 	for(var i = 0; i < sharkSpaces.length; i++){
 		if(totalSeconds <= 0){
 		  clearInterval(interval);
@@ -98,29 +96,25 @@ var gameScore = function(whack){
 		if(currentPlayer === 1){
 			player1Score++;
 			document.getElementById("score-1").textContent = player1Score;
-				console.log("player 1 score is", player1Score);
 
 		}else{
 			player2Score++;
 			document.getElementById("score-2").textContent = player2Score;
-				console.log("player 2 score is", player2Score);
 		}
 	}
 };
 
+// Track high score and save in local storage to display
 var checkHighScore = function(){
-	// console.log(localStorage.getItem("highScore"));
 	if(player1Score > localStorage.getItem("highScore")){
 		highScore = player1Score;
 		document.getElementById("highScore").textContent = highScore;
 		localStorage.setItem("highScore", highScore);
-			console.log("P1 highScore is ", highScore);
 
 	}else if(player2Score > localStorage.getItem("highScore")){
 		highScore = player2Score;
 		document.getElementById("highScore").textContent = highScore;
 		localStorage.setItem("highScore", highScore);
-			console.log("P2 highScore is ", highScore);
 	}	
 };
 
@@ -137,6 +131,7 @@ var checkWinner = function(){
 	}
 };
 
+// Add event listeners to each box sharks will pop up in
 var addSharkSpacesEventListeners = function(){
 	for(var i = 0; i < sharkSpaces.length; i++){
 		sharkSpaces[i].addEventListener("click", gameScore);
@@ -145,6 +140,7 @@ var addSharkSpacesEventListeners = function(){
 
 addSharkSpacesEventListeners();
 
+// Display modal with game instructions on landing page
 var howTo = function(){
 	swal({
 		title:"How To Play",
@@ -173,6 +169,3 @@ if(localStorage.getItem("highScore")){
 	// Set up the sharkBoxes
 	
 });
-
-// this.removeEventListener("click", gameScore);
-// 			console.log(this);
