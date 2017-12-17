@@ -17,9 +17,9 @@ var newGame = function() {
 	addSharkSpacesEventListeners();
 
 	document.getElementById("gamePage").style.display = "block";
-	document.getElementById("firstPage").style.display = "none";
+	document.getElementById("homePage").style.display = "none";
 	document.getElementById("score-1").textContent = player1Score;
-	document.getElementById("score-2").textContent = player2Score;1
+	document.getElementById("score-2").textContent = player2Score;
 	document.getElementById("start").style.display = "block";
 	document.getElementById("start").textContent = "Start";
 	document.getElementById("playerUp").textContent = "...Grab Your Paddle";
@@ -75,7 +75,7 @@ var countdown = function(){
 	if(totalSeconds <= 3){
 		document.getElementById("timer").style.color = "red";
 	}
-	
+
 	for(var i = 0; i < sharkSpaces.length; i++){
 		if(totalSeconds <= 0){
 		  clearInterval(interval);
@@ -151,11 +151,11 @@ var howTo = function(){
 
 document.addEventListener("DOMContentLoaded", function() {
 	document.getElementById("gamePage").style.display = "none";
-	document.getElementById("firstPage").style.display = "block";
+	document.getElementById("homePage").style.display = "block";
 
 // Add Event Listeners
-if(localStorage.getItem("highScore")){
-	document.getElementById("highScore").textContent = localStorage.getItem("highScore");
+	if(localStorage.getItem("highScore")){
+		document.getElementById("highScore").textContent = localStorage.getItem("highScore");
 	}
 
 	document.getElementById("howTo").addEventListener("click", howTo);
