@@ -3,7 +3,6 @@ var highScore = document.getElementById("highScore");
 var timer = document.getElementById("timer");
 var interval;
 var totalSeconds = 10;
-var numberOfPlayers = 2;
 var currentPlayer = 2;
 var currentScore = 0;	
 var player1Score = 0;
