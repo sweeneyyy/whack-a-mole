@@ -1,4 +1,4 @@
-var sharkSpaces = document.querySelectorAll("#gameGrid div");
+var sharkSpaces = document.querySelectorAll(".gridBox div");
 var highScore = document.getElementById("highScore");
 var timer = document.getElementById("timer");
 var interval;
@@ -72,6 +72,7 @@ var countdown = function(){
 	  sharkSpaces[i].classList.remove("shark");
 	  sharkSpaces[i].classList.add("water");
 	}
+
 	if(totalSeconds <= 3){
 		document.getElementById("timer").style.color = "red";
 	}

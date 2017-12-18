@@ -126,21 +126,6 @@ button {
 	height: 120px;
 }
 
-.gridBox:after .shark{
-	height: 100%;
-}
-
-/*.gridBox:after {
-	position: absolute;
-	bottom: -30px;
-	z-index: 1;
-	display: block;
-	width: 100%;
-	height: 70px;
-	background: white;
-	background-size: contain;
-}*/
-
 .shark {
 	position: absolute;
 	bottom: 0;
@@ -150,21 +135,9 @@ button {
 	background-size: cover;
 	overflow: hidden;
 	width: 100%;
-	height: 0;
-	transition: .5s ease;
+	animation: grow 1s infinite;
+	z-index: 99;
 }
-
-/*.shark {
-	background-image: url('assets/images/shark.png');
-	position: absolute;
-	display: inline-block;
-	top: 100%;
-	width: 100%;
-	height: 100%;
-	background-image: url('assets/images/shark_popup.png') bottom center no-repeat;
-	background-size: 60%;
-	transition: all 0.4s;
-}*/
 
 .water {
 	position: relative;
@@ -174,4 +147,8 @@ button {
 	/*background-size: cover;*/
 }
 
-
+@keyframes grow {
+	0% { transform: scale(1) }
+  50% { transform: scale(1.5) }
+  100% { transform: scale(1) }
+}

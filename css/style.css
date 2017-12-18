@@ -137,21 +137,3 @@ img{
 	width: 90%;
 	top:0%;
 }
-
-.shark1{
-	animation: popup 1s infinite ease-out alternate;
-	filter: none;
-}*/
-/*
-@keyframes popup{
-	0%{
-		top:100%;
-	}
-	50%{
-		top: 100%;
-	}
-	100%{
-		top: 0%;
-	}
-
-}*/
