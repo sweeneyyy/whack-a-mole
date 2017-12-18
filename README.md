@@ -22,6 +22,7 @@ Broke down functions needed for a playable game<br />
   
 <h2>Issues</h2>
 Trouble with animating the shark pop up, used scale keyframe but would like to improve<br />
+Used absolute positioning with CSS. Need to revise so I can center all on the page.
 
 <h2>Next Steps</h2>
 Create mulitple levels with different speeds<br />
