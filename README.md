@@ -2,7 +2,12 @@
 WDI Project 1
 
 <h2>Technologies Used</h2>
-HTML, CSS, Javascript, Sweetalerts
+  <ul>
+    <li>HTML</li> 
+    <li>CSS</li> 
+    <li>Javascript</li>
+    <li>Sweetalerts</li>
+  </ul>
 
 <h2>Approach Taken</h2>
 Setup Trello board to break down steps of the project
