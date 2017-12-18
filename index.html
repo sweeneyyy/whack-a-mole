@@ -9,42 +9,58 @@
 </head>
 <body>
 	<div id="page-wrap">
-		<h1>Whack-A-Shark</h1>
-
-		<div id="firstPage">
-			<button class="firstPageButtons" id="howTo">How To Play</button>
-			<button class="firstPageButtons" id="letsPlay">Play Game</button>
+		<h1>Whack-A-Shark!</h1>
+		<div id="homePage">
+			<button class="homePageButtons" id="howTo">How To Play</button>
+			<button class="homePageButtons" id="letsPlay">Play Game</button>
 		</div>
-
 		<div id="gamePage">
 	  	<div id="gameGrid">
-	    	<div class="gridBox" id="top-l"></div>
-	    	<div class="gridBox" id="top-c"></div>
-	    	<div class="gridBox" id="top-r"></div>
-	    	<div class="gridBox" id="middle-l"></div>
-	    	<div class="gridBox" id="middle-c"></div>
-	    	<div class="gridBox" id="middle-r"></div>
-	    	<div class="gridBox" id="bottom-l"></div>
-	    	<div class="gridBox" id="bottom-c"></div>
-	    	<div class="gridBox" id="bottom-r"></div>
+	    	<div class="gridBox">
+	    		<div class="water"></div>
+	    	</div>
+	    	<div class="gridBox">
+	    		<div class="water"></div>
+	    	</div>
+	    	<div class="gridBox">
+	    		<div class="water"></div>
+	    	</div>	
+	    	<div class="gridBox">	    		
+	    		<div class="water"></div>
+	    	</div>
+	    	<div class="gridBox">
+	    		<div class="water"></div>
+	    	</div>
+	    	<div class="gridBox">
+	   	    <div class="water"></div>
+	   	  </div>
+	    	<div class="gridBox">
+	    		<div class="water"></div>
+	    	</div>
+	    	<div class="gridBox">
+	    		<div class="water"></div>
+	    	</div>
+	    	<div class="gridBox">
+	    		<div class="water"></div>
+	    	</div>
 	  	</div>
 	  	<div id="playerUp">...Grab Your Paddle</div>
-	<!-- Score Board and Timer -->
 	  	<div id="scoreBox">
 	  		<h5 id="displayTime">Time</h5>
-		  	<div class="displayStats" id="timer"></div>
+		  		<div class="displayStats" id="timer">0</div>
 				<h5 id="displayScore-1">Player 1</h5>
-		  	<div class="displayStats" id="score-1"></div>
+		  		<div class="displayStats" id="score-1"></div>
 				<h5 id="displayScore-2">Player 2</h5>
-		  	<div class="displayStats" id="score-2"></div>
+		  		<div class="displayStats" id="score-2"></div>
 				<h5 id="displayHighScore">High Score</h5>
-	    	<div class="displayStats" id="highScore"></div>
+	    		<div class="displayStats" id="highScore"></div>
 	  	</div>
 	  	<button class="gameButtons" id="start">Start Game</button>
 	  	<button class="gameButtons" id="reset">Play Again</button>
-			</div>
-
 		</div>
+		<audio id="theme" src="assets/audio/theme.mp3" loop></audio>
+		<audio id="whack" src="assets/audio/whack.mp3"></audio>
+	</div>
 <script type="text/javascript" src="node_modules/sweetalert/dist/sweetalert.min.js"></script>
 <script type="text/javascript" src="script.js"></script>
 </body>
