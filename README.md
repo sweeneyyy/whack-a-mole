@@ -21,10 +21,11 @@ Broke down functions needed for a playable game<br />
   
   
 <h2>Issues</h2>
-Trouble with animating the shark pop up, used scale keyframe but would like to improve
+Trouble with animating the shark pop up, used scale keyframe but would like to improve<br />
 
 <h2>Next Steps</h2>
-Create mulitple levels with different speeds 
+Create mulitple levels with different speeds<br />
+Additional styling
 
 <h2>Resources Used</h2>
 Canva.com for the artwork
