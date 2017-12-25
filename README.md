@@ -2,12 +2,12 @@
 WDI Project 1
 
 <h2>Technologies Used</h2>
-  <ul>
-    <li>HTML</li> 
-    <li>CSS</li> 
-    <li>Javascript</li>
-    <li>Sweetalerts</li>
-  </ul>
+<ul>
+  <li>HTML</li> 
+  <li>CSS</li> 
+  <li>Javascript</li>
+  <li>Sweetalerts</li>
+</ul>
 
 <h2>Approach Taken</h2>
 Setup Trello board to break down steps of the project
@@ -16,22 +16,31 @@ Setup Trello board to break down steps of the project
 Setup grid of boxes first for the gameboard<br />
 Setup layout of game buttons and displays<br />
 Broke down functions needed for a playable game<br />
-  Tracking turns between 2 players<br />
-  Setup game timer and increment<br />
-  Generate random shark pop ups during time allowed<br />
-  Tracking points scored for each player and display<br />
-  Check for winner or draw and display<br />
-  Track high score<br />
-  Reset for a new game<br />
-  
+<ul>
+  <li>Tracking turns between 2 players</li>
+  <li>Setup game timer and increment</li>
+  <li>Generate random shark pop ups during time allowed</li>
+  <li>Tracking points scored for each player and display</li>
+  <li>Check for winner or draw and display</li>
+  <li>Track high score</li>
+  <li>Reset for a new game</li>
+</ul>
   
 <h2>Issues</h2>
-Trouble with animating the shark pop up, used scale keyframe but would like to improve<br />
-Used absolute positioning with CSS. Need to revise so I can center all on the page.
+<ul>
+  <li>Trouble with animating the shark pop up, used scale keyframe but would like to improve.</li>
+  <li>Used absolute positioning with CSS. Need to revise so I can center all on the page and improve styling.</li>
+</ul>
 
 <h2>Next Steps</h2>
-Create mulitple levels with different speeds<br />
-Additional styling
+<ul>
+  <li>Improve Shark animation</li>
+  <li>Create mulitple levels with different speeds</li>
+  <li>Additional styling</li>
+</ul>
 
 <h2>Resources Used</h2>
-Canva.com for the artwork
+<ul>
+  <li>Canva.com for the artwork</li>
+  <li>Google fonts</li>
+</ul>
