@@ -26,6 +26,10 @@ Broke down functions needed for a playable game<br />
   <li>Reset for a new game</li>
 </ul>
   
+<h4>Setup Home Page and Play Game Page</h4>
+<img width="523" alt="screen shot 2017-12-24 at 8 07 58 pm" src="https://user-images.githubusercontent.com/30785832/34332541-87641546-e8e6-11e7-8987-3ba05bb99454.png">
+<img width="705" alt="screen shot 2017-12-24 at 8 08 14 pm" src="https://user-images.githubusercontent.com/30785832/34332558-d014dc08-e8e6-11e7-9650-727803b1ecf2.png">
+
 <h2>Issues</h2>
 <ul>
   <li>Trouble with animating the shark pop up, used scale keyframe but would like to improve.</li>
