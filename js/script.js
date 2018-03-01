@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	document.getElementById("start").addEventListener("click", startGame);
 
 	// Start jaws theme song on page load
-	themeSong = document.getElementById("theme");
-	themeSong.play();
+	// themeSong = document.getElementById("theme");
+	// themeSong.play();
 	
 });
