@@ -23,7 +23,7 @@ var newGame = function() {
 	document.getElementById("score-2").textContent = player2Score;
 	// Show start button and hide play again button
 	document.getElementById("start").style.display = "block";
-	document.getElementById("start").textContent = "Start";
+	document.getElementById("start").textContent = "Player 1 GO!";
 	document.getElementById("playerUp").textContent = "...Grab Your Paddle";
 	document.getElementById("reset").style.display = "none";
 }
@@ -34,6 +34,9 @@ var startGame = function(){
   // Set timer to zero for new game
 	clearInterval(interval);
 	interval = setInterval(countdown, 1000);
+	//remove event listener 
+	// document.getElementById("start").removeEventListener("click", startGame);
+
 	// Set player 1 or 2 for new game
 	playerTurn();
 };
@@ -45,7 +48,7 @@ var playerTurn = function(){
 		currentScore = 0;
 		document.getElementById("playerUp").textContent = "Player 2";
 		document.getElementById("start").style.display = "none";
-		document.getElementById("reset").style.display = "block";
+		document.getElementById("reset").style.display = "inline-block";
 
 	}else {
 		currentPlayer = currentPlayer - 1;
