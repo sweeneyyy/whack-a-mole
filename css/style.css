@@ -64,31 +64,26 @@ button {
 
 #gamePage {
 	margin: auto;
+	max-width: 700px;
 }
 
 #playerUp {
-	/*position: absolute;*/
-	position: relative;
+	/*position: relative;*/
 	background: white;
 	width: 470px;
 	display: inline-block;
-	/*top: 500px;*/
-	/*left: 0;*/
+	clear: left;
 	font-size: 26px;
 	border: 1px white;
 	border-radius: 10px;
 	padding: 16px 0;
-	/*margin: 10px 0;*/
 	margin: 2px;
-	/*left: 10px;*/
-	/*top: 540px;*/
 	color: #d81e1e;
 	text-transform: uppercase;
 	font-weight: 700;
 }
 
 #scoreBox {
-	/*position: absolute;*/
 	/*position: relative;*/
 	display: inline-block;
 	background: white;
@@ -119,7 +114,6 @@ button {
 	/*position: absolute;*/
 	position: relative;
 	background: white;
-	/*left: 0;*/
 	display: inline-block;
 	border: 1px white;
 	border-radius: 10px;

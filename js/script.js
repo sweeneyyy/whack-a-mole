@@ -8,7 +8,7 @@ var currentScore = 0;
 var player1Score = 0;
 var player2Score = 0;
 
-// Setup new game time, scores and display
+// Setup new game timer, scoreboard and display
 var newGame = function() {
 	totalSeconds = 10;
 	player1Score = 0;
@@ -27,18 +27,17 @@ var newGame = function() {
 	document.getElementById("playerUp").textContent = "...Grab Your Paddle";
 	document.getElementById("reset").style.display = "none";
 }
-// Start new game
+// Start game and timer
 var startGame = function(){
 	totalSeconds = 10;
 	countdown();
-  // Set timer to zero for new game
+  // Set timer to zero 
 	clearInterval(interval);
 	interval = setInterval(countdown, 1000);
-	//remove event listener 
-	// document.getElementById("start").removeEventListener("click", startGame);
 
-	// Set player 1 or 2 for new game
+	// Set to player 1 or 2 
 	playerTurn();
+
 };
 
 // Swith turns between player 1 and 2 and display current player
@@ -83,11 +82,18 @@ var countdown = function(){
 	}
 	// Make sharks appear randomly and alert when time is up
 	for(var i = 0; i < sharkSpaces.length; i++){
-		if(totalSeconds <= 0){
-			swal({ title:"Time's Up!", button: "Okay",});
+		//player 1 turn is over
+		if(totalSeconds <= 0 && currentPlayer === 1){
+			swal({ title:"Time's Up! Player 2's Turn", button: "Okay",});
 		  clearInterval(interval);
 		  sharkSpaces[i].classList.add("water");
 
+		//player 2 turn is over
+		}else if(totalSeconds <= 0 && currentPlayer === 2){
+ 			swal({ title:"Game Over!", button: "Okay",});
+		  clearInterval(interval);
+		  sharkSpaces[i].classList.add("water");
+		
 		}else{
 			var sharkSpaceNumber = Math.floor(Math.random() * 9);
 			displaySharks(sharkSpaces[sharkSpaceNumber]);
@@ -96,6 +102,13 @@ var countdown = function(){
 		checkWinner();
 	}
 };
+
+//update game button display based on turn
+// var buttonSwitch = function(){
+// 	if(currentPlayer === 1 && totalSeconds <= 0){
+
+// 	}
+// }
 
 // Keep track of points scored for each player
 var gameScore = function(whack){
