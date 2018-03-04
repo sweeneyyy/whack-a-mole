@@ -29,7 +29,7 @@ var newGame = function() {
 }
 // Start game and timer
 var startGame = function(){
-	totalSeconds = 10;
+	totalSeconds = 5;
 	countdown();
   // Set timer to zero 
 	clearInterval(interval);
@@ -52,7 +52,9 @@ var playerTurn = function(){
 	}else {
 		currentPlayer = currentPlayer - 1;
 		document.getElementById("playerUp").textContent = "Player 1";
-		document.getElementById("start").textContent = "Player 2";
+		// document.getElementById("start").textContent = "Player 2";
+		document.getElementById("start").style.color = "#d3d3d3";
+
 	}
 };
 // Change grid boxes background image randomly from waves to shark
@@ -87,6 +89,10 @@ var countdown = function(){
 			swal({ title:"Time's Up! Player 2's Turn", button: "Okay",});
 		  clearInterval(interval);
 		  sharkSpaces[i].classList.add("water");
+		  document.getElementById("start").textContent = "Player 2 GO!";
+		  document.getElementById("start").style.color = "#486A81";
+			document.getElementById("playerUp").textContent = "...Grab Your Paddle";
+
 
 		//player 2 turn is over
 		}else if(totalSeconds <= 0 && currentPlayer === 2){
