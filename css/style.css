@@ -1,6 +1,5 @@
 body {
 	text-align: center;
-	/*display: inline-block;*/
 	font-family: 'Barlow Semi Condensed', sans-serif;
 	color: #486A81;
 	background: #e3f2f4;
@@ -11,7 +10,6 @@ h1 {
 }
 
 h5 {
-	/*position: relative;*/
 	margin: 12px;
 	padding-top: 10px;
 	font-size: 16px;
@@ -43,23 +41,18 @@ button:focus {
 }
 
 .gameButtons {
-	/*position: relative;*/
 	display: inline-block;
-	/*margin: 20px;*/
 	text-transform: uppercase;
+	margin-bottom: 10px;
 }
 
 #start {
 	display: inline-block !important;
 }
 
-/*#reset {
-	display: inline-block !important;
-}*/
-
-/*#gamePageDisplay {
-	margin-top: 10px;
-}*/
+#reset {
+	margin-bottom: 40px;
+}
 
 #gamePage {
 	margin: auto;
@@ -67,7 +60,6 @@ button:focus {
 }
 
 #playerUp {
-	/*position: relative;*/
 	background: white;
 	width: 470px;
 	display: inline-block;
@@ -83,14 +75,11 @@ button:focus {
 }
 
 #scoreBox {
-	/*position: relative;*/
 	display: inline-block;
 	background: white;
 	width: 200px;
 	height: 450px;
 	top: 0;
-	/*margin: 10px 20px;*/
-	/*margin: 0;*/
 	border: 1px white;
 	border-radius: 10px;
 }
@@ -117,7 +106,6 @@ button:focus {
 	padding-top: 10px;
 	width: 470px;
 	height: 440px;
-	/*margin: 10px 2px 0 10px;*/
 	cursor: url('https://i.imgur.com/iVmCd7k.png'), pointer;
 }
 

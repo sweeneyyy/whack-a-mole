@@ -24,20 +24,20 @@ var newGame = function() {
 	// Show start button and hide play again button
 	document.getElementById("start").style.display = "block";
 	document.getElementById("start").textContent = "Player 1 GO!";
+	document.getElementById("start").style.color = "#486A81";
 	document.getElementById("playerUp").textContent = "...Grab Your Paddle";
 	document.getElementById("reset").style.display = "none";
-}
+};
+
 // Start game and timer
 var startGame = function(){
-	totalSeconds = 5;
+	totalSeconds = 10;
 	countdown();
   // Set timer to zero 
 	clearInterval(interval);
 	interval = setInterval(countdown, 1000);
-
 	// Set to player 1 or 2 
 	playerTurn();
-
 };
 
 // Swith turns between player 1 and 2 and display current player
@@ -46,17 +46,16 @@ var playerTurn = function(){
 		currentPlayer = currentPlayer + 1;
 		currentScore = 0;
 		document.getElementById("playerUp").textContent = "Player 2";
+		document.getElementById("start").style.color = "#d3d3d3";
 		document.getElementById("start").style.display = "none";
-		document.getElementById("reset").style.display = "inline-block";
 
 	}else {
 		currentPlayer = currentPlayer - 1;
 		document.getElementById("playerUp").textContent = "Player 1";
-		// document.getElementById("start").textContent = "Player 2";
 		document.getElementById("start").style.color = "#d3d3d3";
-
 	}
 };
+
 // Change grid boxes background image randomly from waves to shark
 var displaySharks = function(spaceToPopulate){
 	// Set everything back to waves
@@ -86,20 +85,21 @@ var countdown = function(){
 	for(var i = 0; i < sharkSpaces.length; i++){
 		//player 1 turn is over
 		if(totalSeconds <= 0 && currentPlayer === 1){
-			swal({ title:"Time's Up! Player 2's Turn", button: "Okay",});
+			swal({ title:"Time's Up!", text: "Player 2's Turn", button: "Okay"});
 		  clearInterval(interval);
 		  sharkSpaces[i].classList.add("water");
 		  document.getElementById("start").textContent = "Player 2 GO!";
 		  document.getElementById("start").style.color = "#486A81";
 			document.getElementById("playerUp").textContent = "...Grab Your Paddle";
 
-
 		//player 2 turn is over
 		}else if(totalSeconds <= 0 && currentPlayer === 2){
- 			swal({ title:"Game Over!", button: "Okay",});
-		  clearInterval(interval);
+ 			swal({title:"Game Over!", button: "Okay"})
+ 			document.getElementById("reset").style.display = "inline-block";
+ 			document.getElementById("start").style.display = "none";
+			clearInterval(interval);
 		  sharkSpaces[i].classList.add("water");
-		
+
 		}else{
 			var sharkSpaceNumber = Math.floor(Math.random() * 9);
 			displaySharks(sharkSpaces[sharkSpaceNumber]);
@@ -108,13 +108,6 @@ var countdown = function(){
 		checkWinner();
 	}
 };
-
-//update game button display based on turn
-// var buttonSwitch = function(){
-// 	if(currentPlayer === 1 && totalSeconds <= 0){
-
-// 	}
-// }
 
 // Keep track of points scored for each player
 var gameScore = function(whack){
@@ -133,6 +126,7 @@ var gameScore = function(whack){
 		}
 	}
 };
+
 // Track high score and save in local storage to display
 var checkHighScore = function(){
 	if(player1Score > localStorage.getItem("highScore")){
@@ -159,6 +153,7 @@ var checkWinner = function(){
 		}
 	}
 };
+
 // Add event listeners to each box sharks will pop up in
 var addSharkSpacesEventListeners = function(){
 	for(var i = 0; i < sharkSpaces.length; i++){
@@ -175,8 +170,7 @@ var howTo = function(){
 		text: "Use the paddle to whack the sharks! Get a point for each shark you whack until the time is up. The player with the most points wins.",
 		button: "Got it",
 	});
-}
-
+};
 // Setup display, game and theme song on page load
 document.addEventListener("DOMContentLoaded", function() {
 	document.getElementById("gamePage").style.display = "none";
@@ -186,7 +180,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	if(localStorage.getItem("highScore")){
 		document.getElementById("highScore").textContent = localStorage.getItem("highScore");
 	}
-
 	document.getElementById("howTo").addEventListener("click", howTo);
 	document.getElementById("letsPlay").addEventListener("click", newGame);
 	document.getElementById("reset").addEventListener("click", newGame);
@@ -196,5 +189,4 @@ document.addEventListener("DOMContentLoaded", function() {
 	// Start jaws theme song on page load
 	// themeSong = document.getElementById("theme");
 	// themeSong.play();
-	
 });
