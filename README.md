@@ -5,7 +5,7 @@
 * HTML
 * CSS
 * Sweetalerts
-* ![Live Site](https://sweeneyyy.github.io/whack-a-shark/)
+* Live site on [GitHub Pages](https://sweeneyyy.github.io/whack-a-shark/)
 
 
 ## Approach Taken
