@@ -1,6 +1,5 @@
 body {
 	text-align: center;
-	display: inline-block;
 	font-family: 'Barlow Semi Condensed', sans-serif;
 	color: #486A81;
 	background: #e3f2f4;
@@ -11,8 +10,7 @@ h1 {
 }
 
 h5 {
-	position: relative;
-	margin: 5px 2px;
+	margin: 12px;
 	padding-top: 10px;
 	font-size: 16px;
 }
@@ -20,10 +18,14 @@ h5 {
 button {
 	border: 1px white;
 	border-radius: 10px;
-	padding: 15px;
+	padding: 18px;
 	font-size: 20px;
 	width: 200px;
 	color: #486A81;
+}
+
+button:focus {
+	outline: 0;
 }
 
 #homePage {
@@ -31,6 +33,7 @@ button {
 	border-radius: 15px;
 	width: 500px;
 	height: 500px;
+	margin: auto;
 }
 	
 .homePageButtons {
@@ -38,44 +41,45 @@ button {
 }
 
 .gameButtons {
-	position: absolute;
-	margin: 20px;
-	top: 535px;
-	left: 470px;
+	display: inline-block;
 	text-transform: uppercase;
-	margin-top: 15px;
+	margin-bottom: 10px;
 }
 
-#gamePageDisplay {
-	margin-top: 10px;
+#start {
+	display: inline-block !important;
+}
+
+#reset {
+	margin-bottom: 40px;
+}
+
+#gamePage {
+	margin: auto;
+	max-width: 700px;
 }
 
 #playerUp {
-	position: absolute;
 	background: white;
 	width: 470px;
-	top: 500px;
-	left: 0;
+	display: inline-block;
+	clear: left;
 	font-size: 26px;
 	border: 1px white;
 	border-radius: 10px;
-	padding: 10px 0;
-	margin: 10px 0;
-	left: 10px;
-	top: 540px;
+	padding: 16px 0;
+	margin: 2px;
 	color: #d81e1e;
 	text-transform: uppercase;
 	font-weight: 700;
 }
 
 #scoreBox {
-	position: absolute;
+	display: inline-block;
 	background: white;
 	width: 200px;
 	height: 450px;
-	top: 20;
-	left: 470px;
-	margin: 10px 20px;
+	top: 0;
 	border: 1px white;
 	border-radius: 10px;
 }
@@ -83,27 +87,25 @@ button {
 .displayStats {
 	display: inline-block;
 	width: 130px;
-	height: 50px;
+	height: 30px;
 	border: 1px white;
 	border-radius: 10px;
-	margin: 10px 5px 0 5px;
-	padding: 5px 5px;
+	margin: 0px 5px 20px 5px;
+	padding: 6px 5px;
 	background: #e3f2f4;
 	color: #0a5491;
 	font-size: 26px;
 }
 
 #gameGrid {
-	position: absolute;
+	position: relative;
 	background: white;
-	left: 0;
+	display: inline-block;
 	border: 1px white;
 	border-radius: 10px;
 	padding-top: 10px;
 	width: 470px;
 	height: 440px;
-	left: 0;
-	margin: 10px 2px 0 10px;
 	cursor: url('https://i.imgur.com/iVmCd7k.png'), pointer;
 }
 
