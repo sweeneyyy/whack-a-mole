@@ -1,10 +1,9 @@
-# whack-a-shark
-WDI Project 1
+# whack-a-shark!
 
 ## Technologies Used
+* Javascript
 * HTML
 * CSS
-* Javascript
 * Sweetalerts
 
 
@@ -26,8 +25,8 @@ Broke down functions needed for a playable game:
 
   
 ## Setup Home Page and Play Game Page
-![home](https://user-images.githubusercontent.com/30785832/34332541-87641546-e8e6-11e7-8987-3ba05bb99454.png)
-![game](https://user-images.githubusercontent.com/30785832/34332558-d014dc08-e8e6-11e7-9650-727803b1ecf2.png)
+![home](https://user-images.githubusercontent.com/30785832/36948655-2463eec4-1fac-11e8-8251-990ed117bc06.png)
+![game](https://user-images.githubusercontent.com/30785832/36948658-33961804-1fac-11e8-9071-c409b88536b2.png)
 
 
 ## Next Steps
