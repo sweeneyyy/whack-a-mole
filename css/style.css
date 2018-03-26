@@ -76,10 +76,11 @@ button:focus {
 
 #scoreBox {
 	display: inline-block;
+	position: relative;
 	background: white;
 	width: 200px;
 	height: 450px;
-	top: 0;
+	top: 30px;
 	border: 1px white;
 	border-radius: 10px;
 }
