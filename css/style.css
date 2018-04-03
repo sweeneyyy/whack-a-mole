@@ -1,5 +1,4 @@
 * {
-	box-model: border-box; 
 	margin: 0; 
 	padding: 0; 
 }
@@ -63,6 +62,7 @@ button:focus {
 }
 
 #gamePage {
+	position: relative;
 	margin: auto;
 	max-width: 700px;
 }
