@@ -1,3 +1,9 @@
+* {
+	box-model: border-box; 
+	margin: 0; 
+	padding: 0; 
+}
+
 body {
 	text-align: center;
 	font-family: 'Barlow Semi Condensed', sans-serif;
@@ -38,12 +44,14 @@ button:focus {
 	
 .homePageButtons {
 	display: inline;
+	background-color: #FFF;
 }
 
 .gameButtons {
 	display: inline-block;
 	text-transform: uppercase;
 	margin-bottom: 10px;
+	background-color: #FFF;
 }
 
 #start {
