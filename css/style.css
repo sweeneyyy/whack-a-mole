@@ -1,160 +1,164 @@
 * {
-	margin: 0; 
-	padding: 0; 
+  margin: 0;
+  padding: 0;
 }
 
 body {
-	text-align: center;
-	font-family: 'Barlow Semi Condensed', sans-serif;
-	color: #486A81;
-	background: #e3f2f4;
+  text-align: center;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  color: #486a81;
+  background: #e3f2f4;
 }
 
 h1 {
-	margin: 20px;
+  margin: 20px;
 }
 
 h5 {
-	margin: 12px;
-	padding-top: 10px;
-	font-size: 16px;
+  margin: 12px;
+  padding-top: 10px;
+  font-size: 16px;
 }
 
 button {
-	border: 1px white;
-	border-radius: 10px;
-	padding: 18px;
-	font-size: 20px;
-	width: 200px;
-	color: #486A81;
+  border: 1px white;
+  border-radius: 10px;
+  padding: 18px;
+  font-size: 20px;
+  width: 200px;
+  color: #486a81;
 }
 
 button:focus {
-	outline: 0;
+  outline: 0;
 }
 
 #homePage {
-	background-image: url('https://i.imgur.com/aOIGk8Y.png');
-	border-radius: 15px;
-	width: 500px;
-	height: 500px;
-	margin: auto;
+  background-image: url('https://i.imgur.com/aOIGk8Y.png');
+  border-radius: 15px;
+  width: 500px;
+  height: 500px;
+  margin: auto;
 }
-	
+
 .homePageButtons {
-	display: inline;
-	background-color: #FFF;
+  display: inline;
+  background-color: #fff;
 }
 
 .gameButtons {
-	display: inline-block;
-	text-transform: uppercase;
-	margin-bottom: 10px;
-	background-color: #FFF;
+  display: inline-block;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  background-color: #fff;
 }
 
 #start {
-	display: inline-block !important;
+  display: inline-block !important;
 }
 
 #reset {
-	margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 #gamePage {
-	position: relative;
-	margin: auto;
-	max-width: 700px;
+  position: relative;
+  margin: auto;
+  max-width: 700px;
 }
 
 #playerUp {
-	background: white;
-	width: 470px;
-	display: inline-block;
-	clear: left;
-	font-size: 26px;
-	border: 1px white;
-	border-radius: 10px;
-	padding: 16px 0;
-	margin: 2px;
-	color: #d81e1e;
-	text-transform: uppercase;
-	font-weight: 700;
+  background: white;
+  width: 470px;
+  display: inline-block;
+  clear: left;
+  font-size: 26px;
+  border: 1px white;
+  border-radius: 10px;
+  padding: 16px 0;
+  margin: 2px;
+  color: #d81e1e;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 #scoreBox {
-	display: inline-block;
-	position: relative;
-	background: white;
-	width: 200px;
-	height: 450px;
-	top: 30px;
-	border: 1px white;
-	border-radius: 10px;
+  display: inline-block;
+  position: relative;
+  background: white;
+  width: 200px;
+  height: 450px;
+  border: 1px white;
+  border-radius: 10px;
 }
 
 .displayStats {
-	display: inline-block;
-	width: 130px;
-	height: 30px;
-	border: 1px white;
-	border-radius: 10px;
-	margin: 0px 5px 20px 5px;
-	padding: 6px 5px;
-	background: #e3f2f4;
-	color: #0a5491;
-	font-size: 26px;
+  display: inline-block;
+  width: 130px;
+  height: 30px;
+  border: 1px white;
+  border-radius: 10px;
+  margin: 0px 5px 20px 5px;
+  padding: 6px 5px;
+  background: #e3f2f4;
+  color: #0a5491;
+  font-size: 26px;
 }
 
 #gameGrid {
-	position: relative;
-	background: white;
-	display: inline-block;
-	border: 1px white;
-	border-radius: 10px;
-	padding-top: 10px;
-	width: 470px;
-	height: 440px;
-	cursor: url('https://i.imgur.com/iVmCd7k.png'), pointer;
+  position: relative;
+  background: white;
+  display: inline-block;
+  border: 1px white;
+  border-radius: 10px;
+  padding-top: 10px;
+  width: 470px;
+  height: 440px;
+  cursor: url('https://i.imgur.com/iVmCd7k.png'), pointer;
 }
 
 .gridBox {
-	position: relative;
-	width: 120px;
-	height: 120px;
-	display: inline-block;
-	margin: -1px;
-	padding: 10px;
-	background-image: url('https://i.imgur.com/pHQ2OTC.png');
-	background-size: cover;
-	border: 1px white;
-	border-radius: 8px;
-	overflow: hidden;
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: inline-block;
+  margin: -1px;
+  padding: 10px;
+  background-image: url('https://i.imgur.com/pHQ2OTC.png');
+  background-size: cover;
+  border: 1px white;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .shark {
-	position: absolute;
-	bottom: 0;
-	background-image: url('https://i.imgur.com/uJUEF0D.png');
-	background-size: cover;
-	overflow: hidden;
-	width: 100%;
-	height: 100%;
-	animation: grow 1s infinite;
-	z-index: 99;
+  position: absolute;
+  bottom: 0;
+  background-image: url('https://i.imgur.com/uJUEF0D.png');
+  background-size: cover;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  animation: grow 1s infinite;
+  z-index: 99;
 }
 
 .water {
-	position: relative;
-	background: white;
-	overflow: hidden;
-	background-image: url('https://i.imgur.com/pHQ2OTC.png');
-	background-size: cover;
+  position: relative;
+  background: white;
+  overflow: hidden;
+  background-image: url('https://i.imgur.com/pHQ2OTC.png');
+  background-size: cover;
 }
 
 @keyframes grow {
-	0% { transform: scale(1) }
-  50% { transform: scale(1.5) }
-  100% { transform: scale(1) }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
-
